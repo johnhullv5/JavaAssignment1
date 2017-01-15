@@ -1,0 +1,28 @@
+package com.rmi.client;
+
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import com.rmi.demo.*;
+import com.rmi.demo.BMICalculator;
+import com.rmi.demo.BMIConstant;
+
+public class BMIClient {
+	public static void main(String[] args) throws RemoteException, NotBoundException {
+		try {
+			Registry registry = LocateRegistry.getRegistry("localhost", BMIConstant.RPORT);
+			BMICalculator h = (BMICalculator) registry.lookup(BMIConstant.RID);
+			System.out.println(h.add(1, 2));
+			System.out.println(h.divide(1, 2));
+			System.out.println(h.substract(1, 2));
+			System.out.println(h.multiply(1, 2));
+			System.out.println(h.divide(1, 0));
+
+		} catch (Exception e) {
+			System.out.println("Hello client exception: " + e);
+		}
+	}
+}
+

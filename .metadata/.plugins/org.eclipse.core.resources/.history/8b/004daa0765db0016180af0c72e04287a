@@ -1,0 +1,5 @@
+package com.rmi.demo;
+
+public class BMIConstant {
+
+}

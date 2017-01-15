@@ -1,0 +1,34 @@
+package com.rmi.server;
+
+import java.rmi.AlreadyBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import com.rmi.demo.RMIConstant;
+
+public class HelloServer {
+
+//	public static void main(String[] args) throws RemoteException, AlreadyBoundException {
+//		try {
+//			HelloImpl h = new HelloImpl("Hello, world!");
+//			Registry registry = LocateRegistry.createRegistry(RMIConstant.RPORT);
+//			registry.bind(RMIConstant.RID, h);
+//			System.out.println("server started");
+//		} catch (Exception e) {
+//			System.out.println("Hello server failed: " + e);
+//		}
+//	}
+	
+	public static void main(String[] args) throws RemoteException, AlreadyBoundException {
+		try {
+			CalculatorImpl h = new CalculatorImpl();
+			Registry registry = LocateRegistry.createRegistry(RMIConstant.CPORT);
+			registry.bind(RMIConstant.CID, h);
+			System.out.println(" calculator server started");
+		} catch (Exception e) {
+			System.out.println("Hello server failed: " + e);
+		}
+	}
+
+}

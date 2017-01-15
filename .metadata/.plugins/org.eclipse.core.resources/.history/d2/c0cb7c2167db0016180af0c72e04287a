@@ -1,0 +1,26 @@
+package com.rmi.server;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+import com.rmi.demo.BMICalculator;
+
+public class BMICalculatorImpl extends UnicastRemoteObject implements BMICalculator{
+
+	protected BMICalculatorImpl() throws RemoteException {
+		super();
+	}
+
+	@Override
+	public Double calculateBMI(Double height, Double weight) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getCategory(Double height, Double weight) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

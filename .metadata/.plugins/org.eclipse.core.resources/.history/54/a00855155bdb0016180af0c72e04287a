@@ -1,0 +1,5 @@
+package com.rmi.server;
+
+public class HelloServer {
+
+}

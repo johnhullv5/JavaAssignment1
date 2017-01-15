@@ -1,0 +1,9 @@
+package com.rmi.demo;
+
+public interface BMICalculator {
+	
+	public Double calculateBMI(Double height,  Double weight);
+	
+	public String getCategory();
+
+}

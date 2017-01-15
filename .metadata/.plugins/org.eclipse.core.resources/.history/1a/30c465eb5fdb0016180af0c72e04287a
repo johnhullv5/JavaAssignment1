@@ -1,0 +1,18 @@
+package com.rmi.server;
+
+import java.rmi.*;
+import java.rmi.server.*;
+import com.rmi.demo.Hello;
+import com.rmi.demo.Calulator;
+
+public class CalculatorImpl extends UnicastRemoteObject implements Calulator {
+	public String message;
+
+	public HelloImpl(String msg) throws RemoteException {
+		message = msg;
+	}
+
+	public String say() throws RemoteException {
+		return message;
+	}
+}

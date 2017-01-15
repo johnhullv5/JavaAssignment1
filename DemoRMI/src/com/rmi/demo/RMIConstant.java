@@ -1,0 +1,13 @@
+package com.rmi.demo;
+
+public class RMIConstant {
+
+	public static final String RID = "RMIid";
+
+	public static final String CID = "Cid";
+
+	public static final int RPORT = 222;
+
+	public static final int CPORT = 223;
+
+}

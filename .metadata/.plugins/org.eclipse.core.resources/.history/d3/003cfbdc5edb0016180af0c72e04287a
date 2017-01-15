@@ -1,0 +1,6 @@
+package com.rmi.demo;
+
+import java.rmi.*;
+public interface Calulator {
+
+}
