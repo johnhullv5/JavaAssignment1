@@ -1,9 +1,12 @@
 package com.rmi.demo;
 
-public interface BMICalculator {
-	
-	public Double calculateBMI(Double height,  Double weight);
-	
-	public String getCategory(Double height,  Double weight);
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface BMICalculator extends Remote {
+
+	public Double calculateBMI(Double height, Double weight) throws RemoteException;
+
+	public String getCategory(Double height, Double weight) throws RemoteException;
 
 }

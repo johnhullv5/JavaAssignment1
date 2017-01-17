@@ -14,7 +14,7 @@ public class BMICalculatorImpl extends UnicastRemoteObject implements BMICalcula
 	@Override
 	public Double calculateBMI(Double height, Double weight) {
 		try {
-			return (height / (weight * weight));
+			return (weight / (height * height));
 		} catch (Exception e) {
 			System.out.println("something nasty happened.");
 			return null;
