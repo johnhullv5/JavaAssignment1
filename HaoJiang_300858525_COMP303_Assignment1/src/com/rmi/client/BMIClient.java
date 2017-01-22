@@ -20,7 +20,7 @@ public class BMIClient {
 	public static void main(String[] args) throws RemoteException, NotBoundException {
 		try {
 			String height= JOptionPane.showInputDialog("Please input your height(m): ");
-			String weight= JOptionPane.showInputDialog("Please input mark weight(kg): ");
+			String weight= JOptionPane.showInputDialog("Please input your weight(kg): ");
 			Double height_d = Double.parseDouble(height);
 			Double weight_d = Double.parseDouble(weight);
 			
@@ -30,7 +30,7 @@ public class BMIClient {
 			Double re = h.calculateBMI(height_d, weight_d);
 			
 			System.out.println("BMI: "+df2.format(re.doubleValue()));
-			JOptionPane.showMessageDialog(null,    "Your BMI: "+df2.format(re.doubleValue()));
+			JOptionPane.showMessageDialog(null,    "Your BMI: "+df2.format(re.doubleValue())+"\n"+"you are: "+h.getCategory(height_d, weight_d));
 			
 			
 			
